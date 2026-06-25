@@ -1,0 +1,44 @@
+# Large binaries and images
+*.img
+*.iso
+*.bin
+*.tar
+*.tar.xz
+*.tgz
+*.zip
+*.7z
+*.rar
+*.exe
+*.deb
+*.whl
+
+# Logs and temporary outputs
+*.log
+*.tmp
+*.bak
+*.old
+__pycache__/
+*.pyc
+
+# Local-only vendor / SDK / workspace directories
+sdk/
+HyperSDK/
+toolchains/
+hyperenv_rockpi5b/
+Road_Repair_freertos/
+ArmRobotTool*/
+OrbbecSDK*/
+OrbbecViewer*/
+
+# Local machine/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets and local keys
+*.pem
+*.key
+id_*
+authorized_keys
+known_hosts

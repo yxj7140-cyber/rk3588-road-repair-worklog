@@ -1,0 +1,9 @@
+# Minimal chassis plan for RK3588 Road_Repair migration validation.
+# Format: behavior magnitude duration_s
+
+forward 0.35 0.3
+stop 0 0.2
+strafe-right 0.35 0.3
+stop 0 0.2
+rotate-left 0.35 0.3
+stop 0 0.2

@@ -1,0 +1,42 @@
+{
+  "name": "topic1_single_crack_left_offset",
+  "defect": {
+    "kind": "crack",
+    "distance_m": 0.75,
+    "lateral_offset_m": -0.12,
+    "yaw_error_deg": 5.0
+  },
+  "pre_defect_segments": [
+    {
+      "name": "inspect_start",
+      "behavior": "forward",
+      "magnitude": 0.18,
+      "duration_s": 0.6
+    },
+    {
+      "name": "inspect_continue",
+      "behavior": "forward",
+      "magnitude": 0.18,
+      "duration_s": 0.5
+    }
+  ],
+  "approach_segment": {
+    "name": "approach_repair_point",
+    "behavior": "forward",
+    "magnitude": 0.18,
+    "duration_s": 0.45
+  },
+  "post_repair_segments": [
+    {
+      "name": "resume_inspection",
+      "behavior": "forward",
+      "magnitude": 0.18,
+      "duration_s": 0.4
+    }
+  ],
+  "detect_stop_s": 0.2,
+  "arm_align_s": 0.4,
+  "pump_duration_s": 0.8,
+  "arm_retract_s": 0.3,
+  "final_stop_s": 0.3
+}

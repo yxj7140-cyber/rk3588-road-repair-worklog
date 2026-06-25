@@ -31,3 +31,13 @@ Current rule: keep large binary images, SDKs, vendor packages, and VM artifacts 
 - `modules/imu/`: WT901C-TTL IMU, yaw calibration, straight-line assist, and serial configuration.
 
 Keep module-specific tests under `modules/<module>/tests/`. Put cross-module or full-mission tests under `scripts/test/` or `integration/`.
+
+## Repeatable Procedures
+
+Common procedures are documented under `lessons/procedures/` so we do not rediscover them every time:
+
+- Board wireless / hotspot recovery.
+- VMware Ubuntu connection from Windows.
+- VMware shared-folder remounting.
+- New-board restore to the 2026-06-18 state.
+- Board-resident temporary test script cleanup policy.

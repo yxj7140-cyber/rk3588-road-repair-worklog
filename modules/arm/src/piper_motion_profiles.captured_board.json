@@ -1,0 +1,69 @@
+{
+  "profiles": [
+    {
+      "name": "safe_home",
+      "description": "Safe folded pose for startup and shutdown",
+      "joints": [
+        0.0,
+        1.2,
+        -1.2,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "speed_percent": 10
+    },
+    {
+      "name": "inspection_observe",
+      "description": "Raised observation pose for camera scanning",
+      "joints": [
+        0.0,
+        0.9,
+        -0.7,
+        0.0,
+        0.7,
+        0.0
+      ],
+      "speed_percent": 12
+    },
+    {
+      "name": "repair_approach",
+      "description": "Low-speed reach toward crack or pothole target",
+      "joints": [
+        0.1,
+        0.7,
+        -0.4,
+        0.0,
+        0.6,
+        0.0
+      ],
+      "speed_percent": 8
+    },
+    {
+      "name": "repair_retract",
+      "description": "Retract after dispensing material",
+      "joints": [
+        0.0,
+        1.0,
+        -0.9,
+        0.0,
+        0.8,
+        0.0
+      ],
+      "speed_percent": 10
+    },
+    {
+      "name": "current_safe",
+      "description": "Captured current safe pose",
+      "joints": [
+        -0.034191000046568915,
+        -0.04646066468808905,
+        0.04005530633326986,
+        -3.068061932203272,
+        -2.233375670729504,
+        -0.1610066234964769
+      ],
+      "speed_percent": 5
+    }
+  ]
+}

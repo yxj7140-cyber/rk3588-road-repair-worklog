@@ -1,0 +1,6 @@
+python-can==4.5.0
+typing_extensions==4.13.2
+packaging==25.0
+wrapt==1.17.3
+msgpack==1.1.1
+https://github.com/agilexrobotics/pyAgxArm/archive/refs/heads/master.zip

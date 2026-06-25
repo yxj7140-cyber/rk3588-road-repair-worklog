@@ -43,8 +43,19 @@ Large binaries are not committed to Git. This file records where they live local
 | File / Folder | Local Path | Purpose | Status |
 |---|---|---|---|
 | Piper arm Windows tool | `E:\BaiduNetdiskDownload\rt\ArmRobotTool_V1.5.4.260414_release` | Piper arm vendor upper-computer tool | Keep local only |
+| Piper offline packages | `E:\BaiduNetdiskDownload\rt\board_piper\offline_pkgs` | Offline Python wheels and source archives for board-side Piper install | Keep local only; do not commit wheels/zips |
 | Orbbec SDK | `E:\BaiduNetdiskDownload\rt\OrbbecSDK_C_C++_v1.10.27_20250925_0549823cb_win_x64_release` | Depth camera SDK | Keep local only |
 | Orbbec Viewer | `E:\BaiduNetdiskDownload\rt\OrbbecViewer_v1.10.27_202509252154_win_x64_release` | Depth camera viewer | Keep local only |
+| IMU Windows venv | `E:\BaiduNetdiskDownload\rt\imu_dev\.venv` | Local Python environment for WT901C-TTL PC tests | Keep local only; recreate from requirements |
+
+## Logs And Captures
+
+| File / Folder | Local Path | Purpose | Status |
+|---|---|---|---|
+| VM logs | `E:\BaiduNetdiskDownload\rt\vm_logs` | VM script output and recovery logs | Keep local; commit only distilled lessons |
+| Piper logs | `E:\BaiduNetdiskDownload\rt\board_piper\logs` | Arm bring-up, J5 issue, Wi-Fi probe, and install logs | Keep local; commit selected notes only |
+| IMU captures | `E:\BaiduNetdiskDownload\rt\imu_dev\captures` | WT901C-TTL CSV captures | Keep local unless a small selected sample is needed |
+| IMU logs | `E:\BaiduNetdiskDownload\rt\imu_dev\logs` | WT901C-TTL read logs | Keep local unless a small selected sample is needed |
 
 ## Notes
 

@@ -1,0 +1,356 @@
+{
+  "profiles": [
+    {
+      "name": "safe_home",
+      "description": "Safe folded pose for startup and shutdown",
+      "joints": [
+        0.0,
+        1.2,
+        -1.2,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "speed_percent": 10
+    },
+    {
+      "name": "inspection_observe",
+      "description": "Raised observation pose for camera scanning",
+      "joints": [
+        0.0,
+        0.9,
+        -0.7,
+        0.0,
+        0.7,
+        0.0
+      ],
+      "speed_percent": 12
+    },
+    {
+      "name": "repair_approach",
+      "description": "Temporary safe placeholder equal to repair_prepose; update after depth camera and pump-tip calibration",
+      "joints": [
+        0.009808750396208134,
+        1.8005863761124699,
+        -0.618055994716232,
+        3.1744048435272867,
+        -2.095459753236912,
+        0.060405845411523745
+      ],
+      "speed_percent": 6,
+      "captured_at": "20260619_002656",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "captured_flange_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "note": "Current stage placeholder only. It intentionally does not move lower than repair_prepose.",
+      "derived_from": "repair_prepose",
+      "derived_at": "20260619_002900"
+    },
+    {
+      "name": "repair_retract",
+      "description": "Temporary safe placeholder equal to repair_prepose; update after repair approach path is calibrated",
+      "joints": [
+        0.009808750396208134,
+        1.8005863761124699,
+        -0.618055994716232,
+        3.1744048435272867,
+        -2.095459753236912,
+        0.060405845411523745
+      ],
+      "speed_percent": 6,
+      "captured_at": "20260619_002656",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "captured_flange_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "note": "Current stage placeholder only. It represents a safe retract until a real lower approach exists.",
+      "derived_from": "repair_prepose",
+      "derived_at": "20260619_003147"
+    },
+    {
+      "name": "current_safe",
+      "description": "Captured current safe pose",
+      "joints": [
+        -0.034191000046568915,
+        -0.04646066468808905,
+        0.04005530633326986,
+        -3.068061932203272,
+        -2.233375670729504,
+        -0.1610066234964769
+      ],
+      "speed_percent": 5
+    },
+    {
+      "name": "small_approach",
+      "description": "Small approach offset from current_safe for first task-flow execute test",
+      "joints": [
+        -0.034191000046568915,
+        -0.04646066468808905,
+        0.04005530633326986,
+        -3.068061932203272,
+        -2.233375670729504,
+        -0.1310066234964769
+      ],
+      "speed_percent": 3
+    },
+    {
+      "name": "task_home",
+      "description": "Road_Repair task home pose confirmed by user on 2026-06-19",
+      "joints": [
+        0.022392574303087248,
+        -0.03817035074111599,
+        0.03178244567881674,
+        3.19175341629211,
+        -2.250898776419527,
+        0.022741640153486113
+      ],
+      "speed_percent": 8,
+      "captured_at": "20260619_002313",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        -0.086503,
+        0.0016099999999999999,
+        0.120405,
+        -3.096737691813539,
+        0.5866924280578939,
+        0.032969269570172884
+      ],
+      "captured_flange_pose": [
+        -0.086503,
+        0.0016099999999999999,
+        0.120405,
+        -3.096737691813539,
+        0.5866924280578939,
+        0.032969269570172884
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    },
+    {
+      "name": "repair_prepose",
+      "description": "Road_Repair repair prepose confirmed by user on 2026-06-19",
+      "joints": [
+        0.009808750396208134,
+        1.8005863761124699,
+        -0.618055994716232,
+        3.1744048435272867,
+        -2.095459753236912,
+        0.060405845411523745
+      ],
+      "speed_percent": 6,
+      "captured_at": "20260619_002656",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "captured_flange_pose": [
+        0.145349,
+        0.004011,
+        0.180817,
+        0.7427946763562666,
+        1.5037582302257946,
+        -2.41628617633851
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    },
+    {
+      "name": "recovery_after_reset",
+      "description": "Piper posture after controller reset on 2026-06-19; recovery checkpoint before further motion",
+      "joints": [
+        0.022898719786165606,
+        -0.043476151667178754,
+        0.041852995462824026,
+        1.7240187818274788,
+        -2.6092846850240425,
+        0.022689280275926284
+      ],
+      "speed_percent": 4,
+      "captured_at": "20260619_005437",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        -0.11240599999999999,
+        -0.048229,
+        0.179441,
+        1.7253626853515145,
+        0.06361725123519331,
+        -1.005588901829053
+      ],
+      "captured_flange_pose": [
+        -0.11240599999999999,
+        -0.048229,
+        0.179441,
+        1.7253626853515145,
+        0.06361725123519331,
+        -1.005588901829053
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    },
+    {
+      "name": "recovery_after_gui_clear",
+      "description": "Piper posture after ArmRobotTool cleared joint abnormal state on 2026-06-19",
+      "joints": [
+        0.022898719786165606,
+        0.0,
+        0.0,
+        1.7230937573239218,
+        -2.7194847739949646,
+        0.022689280275926284
+      ],
+      "speed_percent": 4,
+      "captured_at": "20260619_011934",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        -0.115855,
+        -0.039513,
+        0.192465,
+        1.7131453805875543,
+        0.07986626657126053,
+        -1.1150384992216174
+      ],
+      "captured_flange_pose": [
+        -0.115855,
+        -0.039513,
+        0.192465,
+        1.7131453805875543,
+        0.07986626657126053,
+        -1.1150384992216174
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    },
+    {
+      "name": "recovery_after_hold_failed",
+      "description": "Piper posture after recovery_after_gui_clear hold failed on 2026-06-19; do not use for motion without GUI status check",
+      "joints": [
+        0.022898719786165606,
+        0.0,
+        0.0,
+        1.7226923315959632,
+        -1.2975126725176245,
+        0.022689280275926284
+      ],
+      "speed_percent": 4,
+      "captured_at": "20260619_012803",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        -0.006918,
+        -0.086795,
+        0.194266,
+        1.694068931863256,
+        -0.1474628685010009,
+        0.2923077431240103
+      ],
+      "captured_flange_pose": [
+        -0.006918,
+        -0.086795,
+        0.194266,
+        1.694068931863256,
+        -0.1474628685010009,
+        0.2923077431240103
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    },
+    {
+      "name": "recovery_after_gui_enable_attempt",
+      "description": "Piper posture after ArmRobotTool enable attempt on 2026-06-19; joint 2 still disabled in Python diagnosis",
+      "joints": [
+        0.022898719786165606,
+        0.0,
+        0.0,
+        1.7238267956097595,
+        -1.2975126725176245,
+        0.022689280275926284
+      ],
+      "speed_percent": 4,
+      "captured_at": "20260619_013722",
+      "capture_connection": {
+        "interface": "agx_cando",
+        "channel": "0",
+        "bitrate": 1000000,
+        "firmware": "default"
+      },
+      "captured_tcp_pose": [
+        -0.0069099999999999995,
+        -0.08678,
+        0.19416799999999998,
+        1.6951684892920127,
+        -0.14775957447383992,
+        0.29223792995393055
+      ],
+      "captured_flange_pose": [
+        -0.0069099999999999995,
+        -0.08678,
+        0.19416799999999998,
+        1.6951684892920127,
+        -0.14775957447383992,
+        0.29223792995393055
+      ],
+      "note": "Task-level reference only. This does not modify Piper hardware zero/calibration."
+    }
+  ]
+}

@@ -12,6 +12,7 @@ camera serial:
 camera mount description:
 target type:
 target square size:
+target inner corners:
 raw image folder:
 robot pose source:
 robot rotation assumption:
@@ -26,6 +27,7 @@ notes:
 - Piper state can be read.
 - Arm workspace is clear.
 - No automatic motion will be run in the first pass.
+- Checkerboard has enough inner corners for calibration. The 2026-06-26 screenshot smoke test only detected `5x3` inner corners, which is useful for visibility testing but too sparse for high-quality hand-eye calibration.
 
 ## Sample Naming
 

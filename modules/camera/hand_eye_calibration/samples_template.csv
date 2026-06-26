@@ -1,0 +1,2 @@
+sample_id,image_path,base_to_gripper_x_m,base_to_gripper_y_m,base_to_gripper_z_m,base_to_gripper_rx_rad,base_to_gripper_ry_rad,base_to_gripper_rz_rad,target_to_cam_x_m,target_to_cam_y_m,target_to_cam_z_m,target_to_cam_rx_rad,target_to_cam_ry_rad,target_to_cam_rz_rad,notes
+handeye_001,images/handeye_001_color.png,,,,,,,,,,,,,example row; fill after pose capture and target detection

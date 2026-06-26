@@ -106,7 +106,7 @@ Bad samples:
 3. Open OrbbecViewer:
 
    ```text
-   E:\OrbbecViewer_v1.10.27_202509252154_win_x64_release\OrbbecViewer_v1.10.27_202509252154_win_x64_release\OrbbecViewer.exe
+   C:\OrbbecViewer_v1.10.27_202509252154_win_x64_release\OrbbecViewer.exe
    ```
 
 4. Verify color and depth streams are stable.
@@ -133,6 +133,15 @@ captured_flange_pose: [x, y, z, rx, ry, rz]
 ```
 
 Important: confirm whether Piper pose rotation is Euler RPY or rotation-vector before trusting final calibration. The solver script supports both, but the correct interpretation must be verified.
+
+## 2026-06-26 Windows Bring-Up Notes
+
+- OrbbecViewer was recovered after fixing the Windows `ORBBEC Depth Sensor` Code 28 driver binding.
+- Verified camera device: `Dabai DC1 SN: CC13653019J USB2.0`.
+- Verified stream: color `640x480 MJPG 30`, checkerboard visible.
+- Depth device is now `Status: OK` in Windows, but depth frame capture still needs a direct verification step before using depth in the repair pipeline.
+- See `lessons/procedures/orbbec-windows-driver-code28.md` if the camera falls back to Code 28 again.
+- Current Piper pose script default is `agx_cando`; if the adapter is detected as `candleLight USB to CAN adapter`, do not assume the old default will read the arm. Verify the correct CAN backend before collecting samples.
 
 ## Solve
 

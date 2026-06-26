@@ -1,52 +1,35 @@
 # New Board Restore Plan
 
-This is the fast recovery checklist for a replacement RK3588 board.
+This file is now a short entry point. The detailed, command-oriented runbook is:
 
-## Goal
+```text
+lessons/procedures/restore-new-board-to-0618.md
+```
 
-Bring a fresh board back to the stable state reached around 2026-06-18.
+Before operating on the replacement board, also read:
 
-## High-Level Order
+```text
+docs/new-board-first-hour-checklist.md
+docs/project-timeline-20260626.md
+docs/known-pitfalls-and-rules.md
+lessons/procedures/connect-board-wireless.md
+lessons/procedures/connect-vm-from-windows.md
+lessons/procedures/vmware-shared-folder.md
+```
 
-1. Confirm board boots a known-good base image.
-2. Apply the fan-control fix first, using the same method as the previous board.
-3. Restore the 6.18-target RT image and Linux-side files.
-4. Verify hotspot / SSH connectivity.
-5. Verify web remote starts in safe-lock mode.
-6. Verify chassis CAN gateway and RT communication before any real movement.
-7. Only run motion tests after explicit safety confirmation.
+Non-negotiable order:
 
-## 6.18 Restore Components
+1. Confirm the board can boot a known-good image.
+2. Redo/confirm the fan-control fix first.
+3. Establish stable SSH/network access.
+4. Restore the 2026-06-18 baseline.
+5. Verify web remote safe-lock and CAN/RT link.
+6. Run motion only after explicit safety confirmation.
 
-- Stable `HyperBoot.bin`:
-  - `E:\BaiduNetdiskDownload\rt\build_outputs\local_rtt_32G_20260614_143025\HyperBoot.bin`
-  - MD5: `44ac4e9524aa40bccfc602f21c1c35a7`
-- Fixed hotspot script:
-  - `/usr/local/bin/start_ap.sh`
-  - Must support both `wlan*` and `wl*` interface names.
-- Browser remote:
-  - Board path: `/home/rock/road_repair_web_remote`
-  - Must start in safe-lock mode.
-- Formal chassis migration package:
-  - Board path: `/home/rock/road_repair_chassis_migration`
-- Systemd:
-  - `road-repair-web-remote.service`
-  - `rockchip-ap.service`
+After SSH is reachable, run the safe self-check script:
 
-## Existing Recovery Scripts
+```powershell
+powershell -ExecutionPolicy Bypass -File "E:\BaiduNetdiskDownload\rt\github_work\rk3588-road-repair-worklog\scripts\host-windows\new_board_safe_selfcheck.ps1" -BoardIp <BOARD_IP>
+```
 
-Keep these scripts available for the replacement board workflow:
-
-- `E:\BaiduNetdiskDownload\rt\vm_scripts\restore_32g_tf_to_0618.sh`
-- `E:\BaiduNetdiskDownload\rt\vm_scripts\fix_32g_tf_restore_metadata.sh`
-- `E:\BaiduNetdiskDownload\rt\vm_scripts\verify_32g_tf_restore.sh`
-- `E:\BaiduNetdiskDownload\rt\board_tools\restore_after_reflash_from_pc.ps1`
-
-## Safety Rule
-
-Do not run real chassis motion until:
-
-- CAN device mapping is confirmed.
-- RT communication is alive.
-- Web remote is in safe-lock mode.
-- User confirms the chassis is safe.
+This self-check intentionally does not unlock current, move the chassis, move the arm, or enable the pump.

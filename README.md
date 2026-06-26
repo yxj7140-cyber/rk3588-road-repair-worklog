@@ -41,3 +41,24 @@ Common procedures are documented under `lessons/procedures/` so we do not redisc
 - VMware shared-folder remounting.
 - New-board restore to the 2026-06-18 state.
 - Board-resident temporary test script cleanup policy.
+
+## Start Here When The New Board Arrives
+
+Read these in order:
+
+1. `docs/new-board-first-hour-checklist.md`
+2. `docs/project-timeline-20260626.md`
+3. `docs/known-pitfalls-and-rules.md`
+4. `lessons/procedures/restore-new-board-to-0618.md`
+5. `lessons/procedures/fan-control-setup.md`
+6. `lessons/procedures/connect-board-wireless.md`
+7. `lessons/procedures/connect-vm-from-windows.md`
+8. `lessons/procedures/vmware-shared-folder.md`
+
+Do not skip the fan-control gap noted in the restore runbook. The user requested fan fix first, then restore to the 2026-06-18 state.
+
+Safe self-check script after the board is reachable:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\host-windows\new_board_safe_selfcheck.ps1 -BoardIp <BOARD_IP>
+```
